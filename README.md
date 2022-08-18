@@ -1,1 +1,1 @@
-# AS3933-receive-data
+# AS3933 data receiver example
