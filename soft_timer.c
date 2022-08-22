@@ -132,7 +132,7 @@ bool TON_16U(uint8_t b_id, bool o_in, uint32_t dw_now, uint32_t dw_preset_time)
 			s_ton_obj[b_id].dw_since = dw_now + dw_preset_time;
 			s_ton_obj[b_id].o_aux = true;
  		}
-		else if(TIME_OVER_U16(s_ton_obj[b_id].dw_since, dw_now))
+		else if(TIME_OVER_U16(uint16_t)(s_ton_obj[b_id].dw_since, (uint16_t)dw_now))
 		{
 			ret_val = true;
 		}
