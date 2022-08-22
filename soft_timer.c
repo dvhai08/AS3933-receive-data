@@ -103,19 +103,19 @@ bool TON(uint8_t b_id, bool o_in, uint32_t dw_now, uint32_t dw_preset_time)
 
 	if(o_in)
 	{
-		if(!s_timer_obj[b_id].o_aux)
+		if(!s_ton_obj[b_id].o_aux)
  		{
-			s_timer_obj[b_id].dw_since = dw_now + dw_preset_time;
-			s_timer_obj[b_id].o_aux = true;
+			s_ton_obj[b_id].dw_since = dw_now + dw_preset_time;
+			s_ton_obj[b_id].o_aux = true;
  		}
-		else if(TIME_OVER(s_timer_obj[b_id].dw_since, dw_now))
+		else if(TIME_OVER(s_ton_obj[b_id].dw_since, dw_now))
 		{
 			ret_val = true;
 		}
 	}
 	else
 	{
-		s_timer_obj[b_id].o_aux = false;
+		s_ton_obj[b_id].o_aux = false;
 	}
 
 	return ret_val;
@@ -127,19 +127,19 @@ bool TON_16U(uint8_t b_id, bool o_in, uint32_t dw_now, uint32_t dw_preset_time)
 
 	if(o_in)
 	{
-		if(!s_timer_obj[b_id].o_aux)
+		if(!s_ton_obj[b_id].o_aux)
  		{
-			s_timer_obj[b_id].dw_since = dw_now + dw_preset_time;
-			s_timer_obj[b_id].o_aux = true;
+			s_ton_obj[b_id].dw_since = dw_now + dw_preset_time;
+			s_ton_obj[b_id].o_aux = true;
  		}
-		else if(TIME_OVER_U16(s_timer_obj[b_id].dw_since, dw_now))
+		else if(TIME_OVER_U16(s_ton_obj[b_id].dw_since, dw_now))
 		{
 			ret_val = true;
 		}
 	}
 	else
 	{
-		s_timer_obj[b_id].o_aux = false;
+		s_ton_obj[b_id].o_aux = false;
 	}
 
 	return ret_val;
